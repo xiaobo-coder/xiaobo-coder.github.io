@@ -1,0 +1,112 @@
+[
+  {
+    "arxiv": "2611.08269",
+    "title": "Accepted but Wrong: Silent Failures of LLM Code Repairs after API Migrations",
+    "authors": [
+      "Xiaobo Chen",
+      "Genliang Zhu",
+      "Ziyuan Wang",
+      "Chu Wang"
+    ],
+    "date": "2026-11-05",
+    "category": "cs.SE",
+    "summary": "After an API migration, LLM-repaired code can run cleanly and still be wrong; one edge input written from the release note catches most wrong repairs that a typical-input check ships.",
+    "topic": "LLMs for software engineering",
+    "code": "",
+    "first_author": true
+  },
+  {
+    "arxiv": "2611.07483",
+    "title": "Signed but Not Safe: Requirement Integrity in Multi-Agent LLM Handoffs",
+    "authors": [
+      "Xiaobo Chen",
+      "Genliang Zhu",
+      "Ziyuan Wang",
+      "Chu Wang"
+    ],
+    "date": "2026-11-05",
+    "category": "cs.CR",
+    "summary": "Signing agent handoffs stops tampering in transit, but one injected line before signing gets through: the signature then authenticates a corrupted requirement list.",
+    "topic": "Multi-agent security",
+    "code": "https://github.com/xiaobo-coder/signed-but-not-safe",
+    "first_author": true
+  },
+  {
+    "arxiv": "2611.00359",
+    "title": "Humanized but Still True? Auditing Facts and Detection in AI-Text Humanizers",
+    "authors": [
+      "Ziyuan Wang",
+      "Genliang Zhu",
+      "Xiaobo Chen"
+    ],
+    "date": "2026-10-30",
+    "category": "cs.CL",
+    "summary": "Commercial AI-text humanizers change or drop checkable facts (numbers, dates, names, quotes) in 35–65% of documents while trying to evade detectors.",
+    "topic": "AI-generated text",
+    "code": "",
+    "first_author": false
+  },
+  {
+    "arxiv": "2610.41453",
+    "title": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution",
+    "authors": [
+      "Genliang Zhu",
+      "Xiaobo Chen",
+      "Ziyuan Wang",
+      "Chu Wang"
+    ],
+    "date": "2026-10-30",
+    "category": "cs.AI",
+    "summary": "Recovering AI agents after tool timeouts leave outcomes ambiguous: evidence-guided planning certifies safe completions that evidence prompting misses.",
+    "topic": "Agent reliability",
+    "code": "",
+    "first_author": false
+  },
+  {
+    "arxiv": "2610.41090",
+    "title": "Verifying Text-to-SQL Queries under Changing Business Semantics",
+    "authors": [
+      "Genliang Zhu",
+      "Xiaobo Chen",
+      "Ziyuan Wang",
+      "Chu Wang"
+    ],
+    "date": "2026-10-30",
+    "category": "cs.AI",
+    "summary": "A Text-to-SQL query can run correctly and still be wrong after business definitions change; obligation-guided counterexample checking finds more of these discrepancies.",
+    "topic": "Text-to-SQL",
+    "code": "",
+    "first_author": false
+  },
+  {
+    "arxiv": "2611.00428",
+    "title": "Do Multimodal Models Decide Consistently on Equivalent Optical Spectra?",
+    "authors": [
+      "Ziyuan Wang",
+      "Genliang Zhu",
+      "Xiaobo Chen"
+    ],
+    "date": "2026-10-30",
+    "category": "cs.LG",
+    "summary": "Multimodal models change their answers on the same optical spectrum depending on whether it is shown as a table or a plot, in nanometers or electronvolts.",
+    "topic": "Multimodal models",
+    "code": "",
+    "first_author": false
+  },
+  {
+    "arxiv": "2610.41085",
+    "title": "Payroll Fraud Detection in Synthetic HR/ERP Graphs: An Inductive Comparison of Rules, Path Features, and Graph Neural Networks",
+    "authors": [
+      "Xiaobo Chen",
+      "Genliang Zhu",
+      "Ziyuan Wang",
+      "Chu Wang"
+    ],
+    "date": "2026-10-29",
+    "category": "cs.AI",
+    "summary": "On synthetic HR/ERP graphs, boosted trees on chained-join path features beat graph neural networks at finding hidden employee–payee links.",
+    "topic": "Graph ML",
+    "code": "",
+    "first_author": true
+  }
+]

@@ -1,0 +1,11 @@
+---
+import Base from '../../layouts/Base.astro';
+import { posts, url, fmtDate } from '../../utils/site';
+---
+<Base title="Blog" description="Notes on LLM agents, AI for software engineering and research practice.">
+  <p class="eyebrow fade-in">Blog / {posts.length} posts</p>
+  <h1 class="display fade-in mt-4">Blog<span class="text-accent">.</span></h1>
+  {posts.length === 0
+    ? <p class="mt-10 rounded-2xl p-10 text-center text-slate-500 ring-1 ring-black/10 dark:text-slate-400 dark:ring-white/15">Posts are coming soon.</p>
+    : <ul class="mt-10 space-y-4">{posts.map((p) => <li><a href={url(`blog/${p.slug}/`)} class="card block p-6"><p class="eyebrow">{fmtDate(p.date)}{p.tags.length > 0 && ` · ${p.tags.join(' · ')}`}</p><p class="mt-2 text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">{p.title}</p>{p.description && <p class="mt-2 text-slate-600 dark:text-slate-400">{p.description}</p>}</a></li>)}</ul>}
+</Base>

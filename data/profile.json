@@ -1,0 +1,43 @@
+{
+  "name": "Xiaobo Chen",
+  "affiliation": "University of Massachusetts Amherst",
+  "headline": "Reliable and secure LLM agents for software engineering.",
+  "bio": "I study where LLM agents look correct but are not: code repairs that pass tests and still break behavior, and multi-agent handoffs that lose or corrupt user requirements. My studies are preregistered and use exactly scorable tasks, so each claim can be checked.",
+  "links": {
+    "Google Scholar": "https://scholar.google.com/citations?user=W91tp8YAAAAJ&hl=en",
+    "GitHub": "https://github.com/xiaobo-coder",
+    "AI4SE Atlas": "https://xiaobo-coder.github.io/AI4SE-Atlas/"
+  },
+  "projects": [
+    {
+      "name": "AI4SE Atlas",
+      "url": "https://xiaobo-coder.github.io/AI4SE-Atlas/",
+      "repo": "https://github.com/xiaobo-coder/AI4SE-Atlas",
+      "description": "An open, curated, unranked directory of AI for Software Engineering researchers, topics, papers and open-source projects, with JSON, CSV and BibTeX data."
+    },
+    {
+      "name": "AI Agent Papers",
+      "url": "https://github.com/xiaobo-coder/awesome-ai-agent-papers",
+      "repo": "https://github.com/xiaobo-coder/awesome-ai-agent-papers",
+      "description": "A one-page list of my arXiv papers with summaries and BibTeX."
+    }
+  ],
+  "about": [
+    "I have about ten years of experience in software engineering and AI research, including earlier work as a software engineer at Alibaba.",
+    "I received bachelor’s and graduate degrees in electrical engineering (Electronic Information Engineering; Signal and Information Processing) from Xidian University (西安电子科技大学), Xi’an, China.",
+    "I welcome research collaboration on reliable and secure LLM agents and AI for software engineering."
+  ],
+  "education": [
+    {
+      "school": "Xidian University",
+      "degree": "Graduate degree, Electrical Engineering — Signal and Information Processing"
+    },
+    {
+      "school": "Xidian University",
+      "degree": "Bachelor’s degree, Electrical Engineering — Electronic Information Engineering"
+    }
+  ],
+  "contact": {
+    "display": "xbchen1992 [at] gmail [dot] com"
+  }
+}

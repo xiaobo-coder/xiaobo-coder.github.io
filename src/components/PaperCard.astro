@@ -1,0 +1,21 @@
+---
+import { bibtex, type Paper } from '../utils/site';
+interface Props { p: Paper; full?: boolean }
+const { p, full = false } = Astro.props;
+const month = new Date(p.date + 'T00:00:00Z').toLocaleDateString('en', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+---
+<article class="card p-6 sm:p-7">
+  <p class="eyebrow">{month} · {p.topic}</p>
+  <h3 class="mt-2 text-xl font-semibold leading-snug tracking-tight text-slate-900 sm:text-[22px] dark:text-white"><a class="hover:text-teal-700 dark:hover:text-teal-300" href={`https://arxiv.org/abs/${p.arxiv}`}>{p.title}</a></h3>
+  <p class="mt-2 text-[15px] leading-7 tracking-[0.01em] text-slate-600 dark:text-slate-400">{p.authors.map((a, i) => <>{i > 0 && ', '}{a === 'Xiaobo Chen' ? <strong class="font-semibold text-slate-900 dark:text-white">{a}</strong> : a}</>)}</p>
+  <p class="mt-3 text-[16px] leading-relaxed text-slate-700 dark:text-slate-300">{p.summary}</p>
+  <div class="mt-5 flex flex-wrap items-center gap-2 border-t border-black/[.06] pt-4 dark:border-white/10">
+    <span class="font-mono text-xs text-slate-500 dark:text-slate-400">arXiv:{p.arxiv}</span>
+    <span class="ml-auto flex gap-2">
+      <a class="rounded-full px-3 py-1.5 text-sm font-medium text-teal-700 ring-1 ring-teal-600/30 hover:bg-teal-50 dark:text-teal-300 dark:ring-teal-300/30 dark:hover:bg-teal-400/10" href={`https://arxiv.org/pdf/${p.arxiv}`}>PDF ↗</a>
+      {p.code && <a class="rounded-full px-3 py-1.5 text-sm font-medium text-slate-700 ring-1 ring-black/10 hover:bg-black/5 dark:text-slate-200 dark:ring-white/15 dark:hover:bg-white/10" href={p.code}>Code ↗</a>}
+      {full && <button type="button" data-bib={p.arxiv} class="rounded-full px-3 py-1.5 text-sm font-medium text-slate-700 ring-1 ring-black/10 hover:bg-black/5 dark:text-slate-200 dark:ring-white/15 dark:hover:bg-white/10">BibTeX</button>}
+    </span>
+  </div>
+  {full && <pre id={`bib-${p.arxiv}`} class="mt-4 hidden overflow-x-auto rounded-xl bg-slate-900 p-4 font-mono text-xs text-slate-100">{bibtex(p)}</pre>}
+</article>

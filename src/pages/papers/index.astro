@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import PaperCard from '../../components/PaperCard.astro';
+import { papers, url } from '../../utils/site';
+const jsonld = papers.map((p) => ({ '@context': 'https://schema.org', '@type': 'ScholarlyArticle', headline: p.title, author: p.authors.map((a) => ({ '@type': 'Person', name: a })),
+  datePublished: p.date, url: `https://arxiv.org/abs/${p.arxiv}`, identifier: { '@type': 'PropertyValue', propertyID: 'arXiv', value: p.arxiv } }));
+---
+<Base title="Papers" description="Research papers by Xiaobo Chen on arXiv: reliable and secure LLM agents and LLMs for software engineering." jsonld={jsonld}>
+  <p class="eyebrow fade-in">Papers / {papers.length} on arXiv / newest first</p>
+  <h1 class="display fade-in mt-4">Papers<span class="text-accent">.</span></h1>
+  <p class="fade-in-2 mt-5 max-w-2xl text-lg text-slate-600 dark:text-slate-400">All papers are 2026 arXiv preprints. <a class="text-teal-700 underline dark:text-teal-300" href={url('papers.bib')}>Download all as BibTeX</a>.</p>
+  <div class="mt-10 space-y-5">{papers.map((p) => <PaperCard p={p} full />)}</div>
+  <script>
+    document.querySelectorAll<HTMLButtonElement>('[data-bib]').forEach((b) => b.addEventListener('click', () => {
+      const pre = document.getElementById('bib-' + b.dataset.bib)!; pre.classList.toggle('hidden');
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(pre.textContent || '').then(() => { const t = b.textContent; b.textContent = 'Copied'; setTimeout(() => (b.textContent = t), 1400); }, () => {});
+    }));
+  </script>
+</Base>
